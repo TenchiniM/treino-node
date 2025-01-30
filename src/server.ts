@@ -1,4 +1,4 @@
-import express from "express"; // importando biblioteca express
+import express from "express"; // importando biblioteca express 
 import helmet from 'helmet'; // importando biblioteca helmet
 import path from "path"; // importando biblioteca path 
 //path trabalha com pastas e arquivos
@@ -29,9 +29,16 @@ server.get("/", (req, res) => {
     //.send - envia a resposta
     // .json - envia a resposta em formato json
 });
+// .get - função que permite que o servidor receba requisições do tipo get
+// "/" - caminho da requisição
+// req - item de requisição
+// res - item de resposta
 
 
 server.listen(3000, () => {
     console.log("Server is running on port 3000");
 });
+// .listen - função que faz o servidor escutar uma porta
+// 3000 - porta que o servidor vai escutar
+// função de callback que mostra no console que o servidor está rodando na porta 3000
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node --import=tsx --watch ./src/teste.ts"
+    "start": "node --env-file=.env --import=tsx --watch ./src/teste.ts"
   },
   "author": "",
   "license": "ISC",

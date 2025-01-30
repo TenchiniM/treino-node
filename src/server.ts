@@ -1,11 +1,11 @@
-import { createServer } from `node:http`;
+import  express  from "express";
 
-const server = createServer((req, res) => {
-    let nome: string = "Maycon";
-    let idade: number = 23; 
-    res.end(`Ola, meu nome e: ${nome} e tenho: ${idade} anos `); // finalizando exibindo um texto
-}); // variavel server recebe a função createServer que recebe uma função com dois parametros req e res
+const server = express();
+
+server.get("/", (req, res) => {
+  res.send("Hello World!"); //res - item de resposta
+});                           //.send - envia a resposta
+
 server.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000'); // exibe uma mensagem no console
+  console.log("Server is running on port 3000");
 });
-// server escuta a porta 3000 e exibe uma mensagem no console

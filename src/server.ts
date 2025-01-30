@@ -28,6 +28,10 @@ server.get('/ping', (req, res) => {
     // pong: true é o que aparece na outra pagina
 });
 
+server.post('/produtos', (req, res) => {
+    res.json({pong: true});
+}); // diretorio para post
+
 server.get('/produtos', (req, res) => {
     res.json({pong: true});
 }); // /produtos, outro diretorio

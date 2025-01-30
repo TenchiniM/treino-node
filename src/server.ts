@@ -21,7 +21,19 @@ server.use(express.static(path.join(__dirname, "../public")));
 // __dirname é uma variável global que retorna o diretório do arquivo atual
 // "../public" é o caminho do diretório que queremos acessar
 
+server.get('/ping', (req, res) => {
+    res.json({ pong: true });
+    // responde com um json com a chave pong e valor true
+    // /ping no diretorio no navegador me leva a outra pagina
+    // pong: true é o que aparece na outra pagina
+});
+
+server.get('/produtos', (req, res) => {
+    res.json({pong: true});
+}); // /produtos, outro diretorio
+
 server.get("/", (req, res) => {
+    // "/" é a rota principal do servidor
     let msg = "Hello World!";
 
     res.json({ msg });

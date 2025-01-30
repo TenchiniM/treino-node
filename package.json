@@ -1,7 +1,7 @@
 {
   "name": "treino-node",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "start": "node -r dotenv/config --env-file=.env --import=tsx --watch ./src/server.ts"
   },

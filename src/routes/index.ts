@@ -1,4 +1,4 @@
-import { Express } from "express";
+import express, { Express } from "express";
 
 const router = express.Router(); // cria um objeto de roteamento
 

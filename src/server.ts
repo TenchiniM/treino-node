@@ -2,7 +2,7 @@ import express from "express"; // importando biblioteca express
 import helmet from 'helmet'; // importando biblioteca helmet
 import path from "path"; // importando biblioteca path 
 //path trabalha com pastas e arquivos
-import router from `./routes/index`; // importando o arquivo index.ts da pasta routes
+import router from './routes/index'; // importando o arquivo index.ts da pasta routes
 
 const server = express(); // criando servidor em express
 
@@ -24,6 +24,7 @@ server.use(express.static(path.join(__dirname, "../public")));
 
 
 
+server.use('/' , router); // diz que o servidor vai usar o arquivo index.ts da pasta routes
 
 server.listen(3000, () => {
     console.log("Server is running on port 3000");

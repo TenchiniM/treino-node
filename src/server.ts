@@ -2,6 +2,7 @@ import express from "express"; // importando biblioteca express
 import helmet from 'helmet'; // importando biblioteca helmet
 import path from "path"; // importando biblioteca path 
 //path trabalha com pastas e arquivos
+import router from `./routes/index`; // importando o arquivo index.ts da pasta routes
 
 const server = express(); // criando servidor em express
 

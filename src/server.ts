@@ -5,6 +5,8 @@ import * as path from "path";
 //path trabalha com pastas e arquivos
 import router from './routes'; // importando o arquivo index.ts da pasta routes
 import produtosRouter from './routes/produtos'; // importando o arquivo produtos.ts da pasta routes
+import  voosRouter from './routes/voos'; // importando o arquivo voos.ts da pasta routes
+
 const server = express(); // criando servidor em express
 
 
@@ -26,6 +28,7 @@ server.use(express.static(path.join(__dirname, "../public")));
 
 server.use('/' , router); // diz que o servidor vai usar o arquivo index.ts da pasta routes
 server.use('/produtos', produtosRouter); // diz que o servidor vai usar o arquivo produtos.ts da pasta routes
+server.use('/voos', voosRouter); // diz que o servidor vai usar o arquivo voos.ts da pasta routes
 server.listen(3000, () => {
     console.log("Server is running on port 3000");
 });

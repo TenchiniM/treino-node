@@ -16,3 +16,5 @@ router.get('/voos/:from/:to', (req, res) => {
     });
     console.log(req.params); // o que aparece na pagina
 });
+
+export default router; // exporta o objeto de roteamento

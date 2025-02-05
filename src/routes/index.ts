@@ -9,7 +9,6 @@ import * as path from "path";
 
 const router = express.Router(); // cria um objeto de roteamento
 
-
 router.get('/', (req, res) => {
     res.send('Hello from the root route!');
 }); // função que permite que o servidor receba requisições do tipo get
@@ -24,9 +23,6 @@ router.get('/ping', (req, res) => {
 router.get("/", (req, res) => {
     // "/" é a rota principal do servidor
     let msg = "Hello World!";
-
-
-
     res.json({ msg });
     //res - item de resposta
     //.send - envia a resposta

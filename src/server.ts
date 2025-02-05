@@ -26,9 +26,10 @@ server.use(express.static(path.join(__dirname, "../public")));
 // __dirname é uma variável global que retorna o diretório do arquivo atual
 // "../public" é o caminho do diretório que queremos acessar 
 
-server.use('/' , router); // diz que o servidor vai usar o arquivo index.ts da pasta routes
 server.use('/produtos', produtosRouter); // diz que o servidor vai usar o arquivo produtos.ts da pasta routes
 server.use('/voos', voosRouter); // diz que o servidor vai usar o arquivo voos.ts da pasta routes
+server.use('/' , router); // diz que o servidor vai usar o arquivo index.ts da pasta routes
+
 server.listen(3000, () => {
     console.log("Server is running on port 3000");
 });

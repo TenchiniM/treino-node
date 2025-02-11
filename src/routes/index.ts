@@ -2,12 +2,18 @@
 
 import express from "express"; // importando biblioteca express 
 import helmet from 'helmet'; // importando biblioteca helmet
+import produtosRouter from './produtos'; // importando o arquivo index.ts da pasta routes
+import voosRouter from './voos'; // importando o arquivo index.ts da pasta routes
 import * as path from "path";
 //import path from "path"; // importando biblioteca path 
 //path trabalha com pastas e arquivos
 
 
 const router = express.Router(); // cria um objeto de roteamento
+
+router.use('/produtos', produtosRouter);
+router.use('/voos', voosRouter);
+
 
 router.get('/', (req, res) => {
     res.send('Hello from the root route!');
